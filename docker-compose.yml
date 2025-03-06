@@ -1,12 +1,12 @@
 services:
   postgres:
     image: postgres
-    container_name: 'postgres'
+    container_name: postgres
     restart: unless-stopped
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
-      POSTGRES_DB: postgres
+      POSTGRES_DB: thoughts
     networks:
       - postgres-network
     volumes:
