@@ -210,3 +210,5 @@ body
 - Aprofundar e aplicar conceitos de Domain-Driven Design (DDD) e Clean Architecture: Implementar essas abordagens pode resultar em uma organização mais robusta e modular do projeto, facilitando a manutenção e evolução contínua do software.
 - Banco de dados não relacional pode simplificar a estrutura e melhorar o desempenho das consultas. A capacidade de armazenar dados de forma mais flexível será uma vantagem em consultas complexas comparando com bancos relacionais.
 - Afrofundar a abordagem do uso de cache.
+- Adicionar validações na camada core da aplicação para não ficar depedente somente dos DTO's utilizados nos controllers.
+- Utilização de fila para criação de pensamentos. 
