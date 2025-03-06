@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "abd2870a-49ef-4682-98a3-dff0dad782ae",
+		"name": "thoughts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12998972"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "profiles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3838/api/users/826844eb-9c94-4a7f-b868-b17065688aaa/profile/2279c31e-cfed-4ba2-b539-ed807f0877e3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3838",
+							"path": [
+								"api",
+								"users",
+								"826844eb-9c94-4a7f-b868-b17065688aaa",
+								"profile",
+								"2279c31e-cfed-4ba2-b539-ed807f0877e3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profiles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3838/api/users/2279c31e-cfed-4ba2-b539-ed807f0877e3/profile/826844eb-9c94-4a7f-b868-b17065688aaa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3838",
+							"path": [
+								"api",
+								"users",
+								"2279c31e-cfed-4ba2-b539-ed807f0877e3",
+								"profile",
+								"826844eb-9c94-4a7f-b868-b17065688aaa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "thoughts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3838/api/users/2279c31e-cfed-4ba2-b539-ed807f0877e3/thoughts?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3838",
+							"path": [
+								"api",
+								"users",
+								"2279c31e-cfed-4ba2-b539-ed807f0877e3",
+								"thoughts"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "follow",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"followerId\": \"2279c31e-cfed-4ba2-b539-ed807f0877e3\",\r\n    \"followingId\": \"826844eb-9c94-4a7f-b868-b17065688aaa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3838/api/users/follow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3838",
+							"path": [
+								"api",
+								"users",
+								"follow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unfollow",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3838/api/users/2279c31e-cfed-4ba2-b539-ed807f0877e3/unfollow/826844eb-9c94-4a7f-b868-b17065688aaa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3838",
+							"path": [
+								"api",
+								"users",
+								"2279c31e-cfed-4ba2-b539-ed807f0877e3",
+								"unfollow",
+								"826844eb-9c94-4a7f-b868-b17065688aaa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "create Thought",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"2279c31e-cfed-4ba2-b539-ed807f0877e3\",\r\n    \"content\": \"olá thought\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3838/api/thoughts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3838",
+					"path": [
+						"api",
+						"thoughts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create reThought",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"826844eb-9c94-4a7f-b868-b17065688aaa\",\r\n    \"referenceThoughtId\": \"79563a9a-7593-44af-9bf5-5f4f997e910e\",\r\n    \"content\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3838/api/thoughts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3838",
+					"path": [
+						"api",
+						"thoughts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create reThoughtComent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"826844eb-9c94-4a7f-b868-b17065688aaa\",\r\n    \"referenceThoughtId\": \"79563a9a-7593-44af-9bf5-5f4f997e910e\",\r\n    \"content\": \"re thought com comentário\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3838/api/thoughts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3838",
+					"path": [
+						"api",
+						"thoughts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search thoughts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"2279c31e-cfed-4ba2-b539-ed807f0877e3\",\r\n    \"paginate\": {\r\n        \"page\": 1\r\n    },\r\n    \"filters\": {\r\n        \"following\": false\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3838/api/thoughts/feed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3838",
+					"path": [
+						"api",
+						"thoughts",
+						"feed"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
