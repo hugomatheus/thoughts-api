@@ -39,8 +39,8 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 | Nº  | Nome da Coluna       | PK | FK | Obrigatório | Tipo da Coluna |
 |---- |----------------------|----|----|-------------|----------------|
-| 1   | follower_id          | P  |    | Y           | UUID           |
-| 2   | following_id         | P  |    | Y           | UUID           |
+| 1   | follower_id          | P  | Y  | Y           | UUID           |
+| 2   | following_id         | P  | Y  | Y           | UUID           |
 
 ### Tabela: thoughts
 #### Descrição: Tabela referente a entidade de pensamentos (thought). Como proposta foi idealizado que a coluna reference_thought_id seja informado para o caso de um re-repostagem de pensamento (re-thought)
@@ -64,7 +64,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 |----|-----------------------|----|----|-------------|----------------|
 | 1  | id                    | P  |    | Y           | UUID           |
 | 2  | thought_id            |    | Y  | Y           | UUID           |
-| 3  | type                  |    | Y  |             | ENUM           |
+| 3  | type                  |    |    | Y            | ENUM           |
 
 
 ## Configuração do projeto
