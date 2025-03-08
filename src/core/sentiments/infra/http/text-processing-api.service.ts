@@ -16,7 +16,7 @@ export class TextProcessingApiService implements SentimentApiInterface {
   async getSentimentByContent(content: string): Promise<any> {
     try {
       const response = await axios.post<TextProcessingResponse>(
-        'https://text-processing.com/api/sentiment2444/',
+        'https://text-processing.com/api/sentiment/',
         { text: content },
         {
           headers: {
